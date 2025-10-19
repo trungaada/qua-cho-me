@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lời chúc 20/10 💐</title>
+<style>
+  /* Định nghĩa các hiệu ứng động */
+  @keyframes fadeInSlideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes borderPulse {
+    0% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 0 10px #ffdbdd; }
+    50% { box-shadow: 0 10px 40px rgba(255, 105, 180, 0.5), 0 0 0 12px #ffc3c9; }
+    100% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 0 10px #ffdbdd; }
+  }
+  @keyframes textShake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(0.5deg); }
+    75% { transform: rotate(-0.5deg); }
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+    color: #333;
+    
+    opacity: 0; 
+    animation: fadeInSlideUp 1.5s ease-out forwards;
+  }
+  
+  /* KHUNG THIỆP */
+  .card-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 90%;
+    
+    border: 5px solid #ffb6c1; 
+    position: relative; /* QUAN TRỌNG: để định vị các góc trang trí */
+    overflow: hidden; /* Để góc trang trí không tràn ra ngoài viền chính */
+    
+    animation: 
+      popIn 1s ease-out 0.5s forwards, 
+      borderPulse 3s infinite ease-in-out 1.5s; 
+      
+    opacity: 0; 
+    
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .card-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 45px rgba(255, 105, 180, 0.4), 0 0 0 10px #ffdbdd; 
+    cursor: default;
+  }
+
+  /* CHI TIẾT TRANG TRÍ GÓC MỚI */
+  .card-box::before, .card-box::after {
+    content: '';
+    position: absolute;
+    width: 30px; 
+    height: 30px;
+    border: 4px solid #ffc3c9; /* Màu trang trí */
+    border-radius: 5px;
+  }
+
+  /* Góc trên bên trái */
+  .card-box::before {
+    top: -15px;
+    left: -15px;
+    border-right: none;
+    border-bottom: none;
+    transform: rotate(45deg); /* Xoay để tạo hình thoi ở góc */
+  }
+
+  /* Góc dưới bên phải */
+  .card-box::after {
+    bottom: -15px;
+    right: -15px;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 40px; 
+    color: #ff1493;
+    text-shadow: 0 0 5px #ffb6c1, 0 0 10px #ff69b4, 0 0 15px rgba(255, 20, 147, 0.5); 
+    margin-top: 0; 
+    transition: transform 0.1s ease-out;
+  }
+
+  h1:hover {
+    animation: textShake 0.3s infinite;
+    cursor: default;
+  }
+
+  p {
+    font-size: 20px; 
+    line-height: 1.7;
+    text-align: center;
+    margin: 20px auto;
+    font-style: italic; 
+    font-weight: 300; 
+  }
+  
+  .icon-decorate {
+    font-size: 28px;
+    color: #ff69b4;
+    vertical-align: middle;
+    margin: 0 8px;
+    display: inline-block;
+    animation: float 4s ease-in-out infinite; 
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="card-box">
+    <h1>
+      <span class="icon-decorate">🌷</span> 
+      Lời chúc 20/10
+      <span class="icon-decorate">💐</span>
+    </h1>
+    <p>
+      <span class="icon-decorate">✨</span> Mẹ yêu quý,<span class="icon-decorate">✨</span><br><br>
+      Chúc mẹ 20/10 thật hạnh phúc, luôn vui vẻ và mạnh khỏe. 
+      Cảm ơn mẹ vì tất cả yêu thương và chăm sóc suốt bao năm qua. 
+      Con yêu mẹ rất nhiều! 💖<br><br>
+      Thân thương,<br>
+      Con của mẹ
+      <span class="icon-decorate">🌹</span>
+    </p>
+  </div>
+</body>
+</html>
